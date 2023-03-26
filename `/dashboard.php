@@ -9,6 +9,26 @@ else{
   date_default_timezone_set('Asia/Kuala_lumpur');// change according timezone
 $currentTime = date( 'Y-m-d H:i:s', time () );
 
+$now=date('Y-m-d');
+$rq=mysqli_query($con,"SELECT * FROM observe WHERE status='0'  AND notify='0'");
+while($rw=mysqli_fetch_array($rq))
+{ $target=date('Y-m-d', strtotime($rw['target_date']. ' - 3 days'));
+  if($now==$target){
+
+    $rqq=mysqli_query($con,"SELECT * FROM user WHERE dept_id='".$rw['dept_id']."'");
+    while($rww=mysqli_fetch_array($rqq))
+    { $email=$rww['email']; $nama=$rww['name'];
+
+      $to =$email;
+      $subject = "Warning!! Your department is assigned to do the inspection";
+      $txt = "Hello $nama! Your department is assigned to do the inspection ";
+      $headers = "From: arif.lutfi963@gmail.com";
+      mail($to,$subject,$txt,$headers);
+
+    }
+  $rw=mysqli_query($con,"UPDATE `observe` SET `notify`='1' WHERE id='".$rw['id']."'");
+  }
+}
   ?>
 <!DOCTYPE html>
 <html lang="en">

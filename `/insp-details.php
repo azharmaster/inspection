@@ -22,6 +22,18 @@ if (isset($_POST['submit'])) {
             $sql=mysqli_query($con,"INSERT INTO `observe`( `insp_id`, `cat_id`, `dept_id`, `observation`, `target_date`, `cdate`) 
             VALUES ('$id','$cat','$dept','$obser','$target','$currentTime')");
             if($sql){	
+
+              $rq=mysqli_query($con,"SELECT * FROM user WHERE dept_id='$dept'");
+              while($rw=mysqli_fetch_array($rq))
+              { $email=$rw['email']; $nama=$rw['name'];
+                $to =$email;
+                $subject = "Your department is assigned to do the inspection";
+                $txt = "Hello $nama! Your department is assigned to do the inspection ";
+                $headers = "From: arif.lutfi963@gmail.com";
+                mail($to,$subject,$txt,$headers);
+              }
+           
+
           echo "<script type='text/javascript'> alert('Successfully Recorded.'); </script>";
           echo "<script type='text/javascript'> document.location = '$namepage?id=$id'; </script>";
           

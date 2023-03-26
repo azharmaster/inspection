@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 23, 2023 at 05:59 AM
+-- Generation Time: Mar 26, 2023 at 05:54 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -117,7 +117,7 @@ CREATE TABLE `inspection` (
 --
 
 INSERT INTO `inspection` (`id`, `insp_name`, `descr`) VALUES
-(1, 'OVID', ''),
+(1, 'OVID', 'test'),
 (3, 'test', '');
 
 -- --------------------------------------------------------
@@ -147,7 +147,7 @@ CREATE TABLE `observe` (
 INSERT INTO `observe` (`id`, `insp_id`, `cat_id`, `dept_id`, `observation`, `target_date`, `corrective`, `status`, `pdf`, `cordate`, `cdate`) VALUES
 (2, 1, 3, 14, 'Starboard Main Engine cooling water expansion tank; outlet\r\npipe leaks ( seals failure)', '2023-03-17', 'Fabricated new outlet pipe line and\r\nseal for stbd main engine cooling\r\nwater expansion tank.', 1, 'Q15_-_IFCP_JM_Perkasa_2_V&V_13-Oct-2022.doc.pdf', '2023-03-21 16:05:32', '2023-03-17 11:16:41'),
 (3, 1, 2, 14, 'GS pump; outlet piping leaks', '2023-03-17', 'Fabricated new pipe line and replaced the gasket of GS Pump outlet pipe', 1, 'MarSIS User Manual Department for Corrective Action) v2.0 (1).pdf', '2023-03-21 16:06:14', '2023-03-17 11:17:14'),
-(6, 2, 2, 14, 'Starboard Main Engine cooling water expansion tank; outlet\r\npipe leaks ( seals failure) ', '2023-03-22', NULL, 0, NULL, NULL, '2023-03-21 17:48:30'),
+(6, 2, 2, 14, 'Starboard Main Engine cooling water expansion tank; outlet\r\npipe leaks ( seals failure) ', '2023-03-22', 'selesai ', 1, '1679667645_MarSIS User Manual Department for Corrective Action) v2.0.pdf', '2023-03-24 22:20:45', '2023-03-21 17:48:30'),
 (7, 2, 2, 11, 'asda asda a asd a', '2023-03-21', 'done repair\r\n', 1, 'MarSIS User Manual - Marine Operations Focal (Department who register observation) v2.0.pdf', '2023-03-21 17:58:08', '2023-03-21 17:57:19');
 
 -- --------------------------------------------------------
