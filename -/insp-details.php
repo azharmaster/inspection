@@ -206,7 +206,7 @@ while($row=mysqli_fetch_array($query))
                   $sql=mysqli_fetch_array(mysqli_query($con,"SELECT * FROM user WHERE id='".$_SESSION['id']."'"));
                   $dept=$sql['dept_id'];
 
-                  $querys=mysqli_query($con,"SELECT * FROM observe WHERE insp_id='$id' AND dept_id='$dept'");
+                  $querys=mysqli_query($con,"SELECT * FROM observe WHERE insp_id='$id' ");
                   $cnt=1;
                   while($rows=mysqli_fetch_array($querys))
                   {
@@ -239,7 +239,15 @@ while($row=mysqli_fetch_array($query))
                       else{ echo '<span class="badge badge-success">Close</span>'; } ?><br><?php echo $rows['cordate']; ?></td>
                   
                      <td> 
-                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="<?php echo $rows['id']; ?>">Update</button>
+                      <?php 
+                       //
+                      $qqq=mysqli_query($con,"SELECT * FROM observe WHERE id='".$rows['id']."' AND insp_id='$id' AND dept_id='$dept'");
+                      $ww=mysqli_fetch_array($qqq); 
+                      if($ww){
+                        echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$rows['id'].'">Update</button>';
+                      }else{}
+                      ?>
+                     
                     </td>
                   
                     <?php $cnt=$cnt+1; } ?>

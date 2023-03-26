@@ -195,7 +195,7 @@ $dept=$sql['dept_id'];
                   ?>
                     <tr>
                       <td><?php echo $cnt ?>.</td>
-                      <td><?php echo $rws['name'] ?></td>
+                      <td><a href="insp-details.php?id=<?php echo $row['id'] ?>"><?php echo $rws['name'] ?></a></td>
                       <td><?php echo $rws1['insp_name'] ?></td>
                       <td><?php echo $row['cdate'] ?></td>
                     </tr>
@@ -257,7 +257,7 @@ $dept=$sql['dept_id'];
                   ?>
                     <tr>
                       <td><?php echo $cnt ?>.</td>
-                      <td><?php echo $row['observation'] ?></td>
+                      <td><a href="insp-details.php?id=<?php echo $row['insp_id'] ?>"><?php echo $row['observation'] ?></a></td>
                       <td><?php if($row['status']==0){ echo '<span class="badge badge-danger">Open</span>'; }else{ echo '<span class="badge badge-success">Close</span>';} ?></td>
                       <td><?php echo $row['target_date'] ?></td>
                     </tr>
