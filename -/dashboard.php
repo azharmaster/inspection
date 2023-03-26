@@ -86,7 +86,7 @@ $dept=$sql['dept_id'];
                 $ret=mysqli_query($con,"SELECT  COUNT(DISTINCT i.id) AS tot FROM observe o JOIN insp i ON o.insp_id=i.id WHERE o.dept_id='$dept'");
                 $num = mysqli_fetch_array($ret); echo $num['tot'];  ?>
                 </h3>
-                <p>TOTAL INSPECTION TYPE</p>
+                <p>TOTAL INSPECTION</p>
               </div>
               <div class="icon">
               <i class="far fa-clipboard"></i>

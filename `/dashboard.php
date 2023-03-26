@@ -164,7 +164,7 @@ $currentTime = date( 'Y-m-d H:i:s', time () );
               <div class="icon">
               <i class="far fa-clipboard"></i>
               </div>
-              <a href="manageIssues.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -183,7 +183,7 @@ $currentTime = date( 'Y-m-d H:i:s', time () );
               <div class="icon">
               <i class="far fa-clipboard"></i>
               </div>
-              <a href="manageTask.php?id=1&sort" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -202,7 +202,7 @@ $currentTime = date( 'Y-m-d H:i:s', time () );
               <div class="icon">
               <i class="far fa-clipboard"></i>
               </div>
-              <a href="manageTask.php?id=2&sort" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
